@@ -1,5 +1,5 @@
 ![Metis logo](img/metis.png)
-
+# Added a new line
 # [Metis](http://www.thisismetis.com/) Data Science Bootcamp Pre-work
 # Table of Contents
 
