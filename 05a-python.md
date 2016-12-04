@@ -28,8 +28,21 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> A lambda expression is the anonymous equivalent of a normal function whose
+body isa single return statement.You can use a lambda expression wherever you could use a reference
+to a function. Here’san example that uses a lambda
+expression as an argument to the built-in filter function:
+aList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+low = 3
+high = 7
+filter(lambda x, l=low, h=high: h>x>l, aList) # returns: [4, 5, 6]
+>>> student_tuples = [
+        ('john', 'A', 15),
+        ('jane', 'B', 12),
+        ('dave', 'B', 10),
+]
+>>> sorted(student_tuples, key=lambda student: student[2])   # sort by age
+[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
