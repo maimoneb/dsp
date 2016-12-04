@@ -1,6 +1,6 @@
 # Statistics
 
-# Table of Contents
+# Table of Statistics Contents
 
 [1. Instructions](#section-a)  
 [2. Instructions for Cloning the Repo](#section-b)  
