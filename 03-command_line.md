@@ -9,22 +9,27 @@ tutorial](https://web.archive.org/web/20160708171659/http://cli.learncodethehard
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> >What do the following commands do:  
+ls : lists files,directories in the current directory  
+ls -a: list with hidden files/directories: 
+ls -l:  '-l' tells the command to use a long list format. It gives back several columns wich correspond to:
+Permissions
+Number of hardlinks
+File owner
+File group
+File size
+Modification time
+Filename 
+ls -lh: List Files with Human Readable Format 
+ls -lah: Returns more comprehensive information about your files and directories compared just to ‘plain’ command ls  
+ls -t:  Sorts files/directories list by time/date.
+ls -Glp: Displays long format listing (excluding the owner name) and directories are shown with /
 
 ---
 
 ###Q2.  List Files in Unix   
 
-What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
-
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -option filename
 
 ---
 
@@ -32,7 +37,7 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -a; ls -1; ld -R; ls -d; ls -F
 
 ---
 
@@ -40,7 +45,7 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs is a command on Unix and most Unix-like operating systems used to build and execute command lines from standard input. Commands such as grep and awk can accept the standard input as a parameter, or argument by using a pipe. However, others such as cp and echo disregard the standard input stream and rely solely on the arguments found after the command. Additionally, under the Linux kernel before version 2.6.23, and under many other Unix-like systems, arbitrarily long lists of parameters cannot be passed to a command,[1] so xargs breaks the list of arguments into sublists small enough to be acceptable.
 
  
 
