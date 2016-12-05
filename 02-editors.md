@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> nano because of it's ease of use, the fact that it has less steep learning curve compared to Emacs/vim. 
 
 --
 
@@ -68,6 +68,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I'm using sublime and pycharm IDE. I've used sublime previously. It has built in features (multi-edit and vim mode), but it has support for plugins, snippets, and many other things.The command palette  feature let’s you access most anything in the settings menus, call your package commands, change file syntax and handle Sublime projects. Can also call Git commands add, branch, commit, push, and pull all from the command palette. To Use: ctrl + shift + p. To customize Sublime Text 2 keyboard shortcuts for mac/windows. Click "Preferences" > "Default Key Bindings" to view them. Copy and paste the ones you want to edit into "Preferences" > "User Key Bindings".
 
  
