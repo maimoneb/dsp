@@ -86,7 +86,95 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>Approaches to Statistics
+◮ Frequentists: From Neymann/Pearson/Wald setup. An orthodox view that sampling is
+infinite and decision rules can be sharp.
+◮ Bayesians: From Bayes/Laplace/de Finetti tradition. Unknown quantities are treated
+probabilistically and the state of the world can always be updated.
+
+Differences Between Bayesians and Non-Bayesians
+What is Fixed?
+Frequentist:
+◮ Data are a repeatable random sample
+- there is a frequency
+◮ Underlying parameters remain constant
+during this repeatable process
+◮ Parameters are fixed
+Bayesian:
+◮ Data are observed from the realized
+sample.
+◮ Parameters are unknown and described
+probabilistically
+◮ Data are fixed
+
+
+Differences Between Bayesians and Non-Bayesians
+What is Fixed?
+Frequentist:
+◮ Data are a repeatable random sample
+- there is a frequency
+-The studies are repeatable
+◮ Underlying parameters remain constant
+during this repeatable process
+-The studies (in protocol) have same
+AAN rate
+◮ Parameters are fixed
+Bayesian:
+◮ Data are observed from the realized
+sample
+-The studies are fixed
+◮ Parameters are unknown and described
+probabilistically
+-The studies (in protocol) have varying
+AAN rates
+◮ Data are fixed
+
+Differences Between Bayesians and Non-Bayesians
+General Inference
+Frequentist:
+◮ Point estimates and standard errors
+or 95% confidence intervals.
+◮ Deduction from P(data|H0), by setting
+α in advance.
+◮ Accept H1 if P(data|H0) < α. ◮ Accept H0 if P(data|H0) ≥ α. Bayesian: ◮ Induction from P(θ|data), starting with P(θ). ◮ Broad descriptions of the posterior distribution such as means and quan- tiles. ◮ Highest posterior density intervals in- dicating region of highest posterior probability, regardless of contiguity.
+◮ Frequentist: P(data|H0) is the sampling distribution of the data given the parameter
+◮ Bayesian: P(θ) is the prior distribution of the parameter (before the data are seen)
+⊲ P(θ|data) is the posterior distribution of the parameter
+⊲ Update of the prior with the data (more later)
+
+Differences Between Bayesians and Frequentists
+Frequentist:
+◮ The parameters of interest are fixed
+and unchanging under all realistic circumstances.
+◮ No information prior to the model
+specification.
+Bayesian:
+◮ View the world probabilistically,
+rather than as a set of fixed phenomena
+that are either known or
+unknown.
+◮ Prior information abounds and it is
+important and helpful to use it.
+
+Frequentist:
+◮ Statistical results assume that data
+were from a controlled experiment.
+◮ Nothing is more important than
+repeatability, no matter what we pay
+for it.
+Bayesian:
+◮ Very careful about stipulating assumptions
+and are willing to defend them.
+◮ Every statistical model ever created in
+the history of the human race is subjective;
+we are willing to admit it.
+
+Frequentist:
+◮ Evaluative Paradigm
+◮ Repeatability can be Important
+Bayesian:
+◮ Modeling Paradigm
+◮ Inference can be appropriate
 
 ---
 
