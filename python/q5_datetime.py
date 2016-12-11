@@ -14,11 +14,11 @@ start =  datetime(2013, 01, 2, 0, 0)
 
 print stop - start
 
+937 days
+
 ####b)  
 date_start = '12312013'  
 date_stop = '05282015'  
-
-
 
 
 ####c)  
