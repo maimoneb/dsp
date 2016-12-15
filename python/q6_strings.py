@@ -18,8 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
-
+    if count > 9:
+        count = 'many'
+    else:
+        count = str(count)
+    return 'Number of donuts: {}'.format(count)
 
 def both_ends(s):
     """
@@ -37,7 +40,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        return ""
+    else:
+        return s[0:2] + s[-2:]
 
 
 def fix_start(s):
@@ -56,7 +62,10 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+   char = s[0]
+
+   s = s[1:].replace(char, '*')
+   return  char + s
 
 
 def mix_up(a, b):
@@ -74,8 +83,10 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
 
+    new_a = b[0:2] + a[2:]
+    new_b = a[0:2] + b[2:]
+    return '<{}> <{}>'.format(new_a, new_b)
 
 def verbing(s):
     """
@@ -91,7 +102,14 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    length = len(s)
+
+    if length > 2:
+        if s.endswith('ing'):
+            s += 'ly'
+        else:
+            s += 'ing'
+    return s
 
 
 def not_bad(s):
@@ -111,8 +129,14 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
 
+    snot = s.find('not')
+    sbad = s.find('bad')
+
+    if sbad > snot:
+        s = s.replace(s[snot:(sbad + 3)], 'good')
+
+    return s
 
 def front_back(a, b):
     """
@@ -130,4 +154,115 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    
+     a_idx = len(a) - (len(a) / 2)
+    b_idx = len(b) - (len(b) / 2)
+
+    return a[:a_idx] + b[:b_idx] + a[a_idx:] + b[b_idx:]
+
+
+//////Complete//Solution//Below///////////////////////////////////////////////////////////////////////
+
+def donuts(count):
+   
+    if count > 9:
+        count = 'many'
+    else:
+        count = str(count)
+    return 'Number of donuts: {}'.format(count)
+
+
+def both_ends(s):
+  
+    if len(s) < 2:
+        return ""
+    else:
+        return s[0:2] + s[-2:]
+
+
+def fix_start(s):
+    
+
+    char = s[0]
+
+    s = s[1:].replace(char, '*')
+    return  char + s
+
+
+def mix_up(a, b):
+   
+    new_a = b[0:2] + a[2:]
+    new_b = a[0:2] + b[2:]
+    return '<{}> <{}>'.format(new_a, new_b)
+
+
+def verbing(s):
+    
+    length = len(s)
+
+    if length > 2:
+        if s.endswith('ing'):
+            s += 'ly'
+        else:
+            s += 'ing'
+    return s
+
+
+def not_bad(s):
+    
+    snot = s.find('not')
+    sbad = s.find('bad')
+
+    if sbad > snot:
+        s = s.replace(s[snot:(sbad + 3)], 'good')
+
+    return s
+
+
+def front_back(a, b):
+    
+    a_idx = len(a) - (len(a) / 2)
+    b_idx = len(b) - (len(b) / 2)
+
+    return a[:a_idx] + b[:b_idx] + a[a_idx:] + b[b_idx:]
+
+
+def main():
+    count = 10
+    numdonuts = donuts(count)
+    print(donuts(4), 'Number of donuts: 4')
+    print(donuts(9), 'Number of donuts: 9')
+    print(donuts(10), 'Number of donuts: many')
+    print(donuts(99), 'Number of donuts: many')
+
+    print(both_ends('spring'), 'spng')
+    print(both_ends('Hello'), 'Helo')
+    print(both_ends('a'), '')
+    print(both_ends('xyz'), 'xyyz')
+
+    print(fix_start('babble'))
+    print(fix_start('aardvark'))
+    print(fix_start('google'))
+    print(fix_start('donut'))
+    print fix_start('babble')
+
+    print(mix_up('mix', 'pod'))
+    print(mix_up('dog', 'dinner'))
+    print(mix_up('gnash', 'sport'))
+    print(mix_up('pezzy', 'firm'))
+
+    print(verbing('hail'))
+    print(verbing('swiming'))
+    print(verbing('do'))
+
+    print(not_bad('This movie is not so bad'), 'This movie is good')
+    print(not_bad('This dinner is not that bad!'), 'This dinner is good!')
+    print(not_bad('This tea is not hot'), 'This tea is not hot')
+    print(not_bad("It's bad yet not"), "It's bad yet not")
+
+    print(front_back('abcd', 'xy'), 'abxcdy')
+    print(front_back('abcde', 'xyz'), 'abcxydez')
+    print(front_back('Kitten', 'Donut'), 'KitDontenut')
+
+if __name__ == "__main__":
+    main()
