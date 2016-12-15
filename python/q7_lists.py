@@ -15,7 +15,6 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
 
 
 def front_x(words):
@@ -24,7 +23,6 @@ def front_x(words):
     order, except group all the strings that begin with 'x' first.
     e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
          ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'].
-
     >>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
     ['xaa', 'xzz', 'axx', 'bbb', 'ccc']
     >>> front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
@@ -32,7 +30,6 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
 
 
 def sort_last(tuples):
@@ -49,8 +46,6 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
-
 
 def remove_adjacent(nums):
     """
@@ -68,8 +63,6 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
-
 
 def linear_merge(list1, list2):
     """
@@ -85,4 +78,67 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+
+
+ //////Complete//Solution//Below/////////////////////////////////////////////////////   
+    
+    
+import re
+
+def read_data(file_name):
+    with open(file_name, 'rb') as inputfile:
+        data = inputfile.read()
+    return data
+
+
+def find_unique(regex, data):
+    results = [x[0] for x in re.findall(regex, data)]
+    return {x : results.count(x) for x in results}
+
+
+def print_unique(name, d):
+    print 'There are ', len(d),' unique ', name, '.'
+    print 'Frequencies are:'
+    for k, f in d.iteritems():
+        print k, ':', f
+
+
+def print_sequence(s):
+    for x in s:
+        print x
+
+
+def get_emails(data):
+    return re.findall(r'([\w.-]+@([\w.-]+))', data)
+
+
+def main():
+
+    data = read_data('faculty.csv')
+
+    # Q1
+
+    print_unique('degrees', find_unique(r'\b([A-Z]+[a-z]*([A-Z]|([.][A-Z]+)+))', data))
+
+    # Q2
+
+    print_unique('titles', find_unique(r'(\b([A-Z][a-z]* )*Professor)', data))
+
+    # Q3
+
+    emails = get_emails(data)
+    print 'Emails:'
+    print_sequence([x[0] for x in emails])
+
+    # Q4
+
+    unique_domains = set([x[1] for x in emails])
+    print 'There are ', len(unique_domains), ' unique email domains.'
+    print 'They are:'
+    print_sequence(unique_domains)
+
+
+if __name__ == "__main__":
+    main()
+
+    
