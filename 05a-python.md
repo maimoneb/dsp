@@ -138,8 +138,6 @@ print stop - start
 937 days
 
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
-
 b.  
 ```
 date_start = '12312013'  
@@ -160,8 +158,6 @@ print stop2 - start2
 
 513 days
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
-
 c.  
 ```
 date_start = '15-Jan-1994'      
@@ -181,23 +177,20 @@ print stop3 - start3
 
 7850 days
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
-
-Place code in this file: [q5_datetime.py](python/q5_datetime.py)
+# Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
 ---
 
 ###Q6. Strings
-Edit the 7 functions in [q6_strings.py](python/q6_strings.py)
-
+### Edit the 7 functions in [q6_strings.py](python/q6_strings.py)
 
 
 def donuts(count):
-    """
-    Given an int count of a number of donuts, return a string of the
+    
+<!--     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
-    'many' instead of the actual count."""
+    'many' instead of the actual count. -->
 
     if count > 9:
         count = 'many'
@@ -207,11 +200,12 @@ def donuts(count):
 
 
 def both_ends(s):
-    """
-    Given a string s, return a string made of the first 2 and the last
+    
+<!--     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
     However, if the string length is less than 2, return instead the
-    empty string."""
+    empty string.
+     -->
     if len(s) < 2:
         return ""
     else:
@@ -219,12 +213,12 @@ def both_ends(s):
 
 
 def fix_start(s):
-    """
-    Given a string s, return a string where all occurences of its
-    first char have been changed to '*', except do not change the
-    first char itself. e.g. 'babble' yields 'ba**le' Assume that the
-    string is length 1 or more."""
 
+<!--   Given a string s, return a string where all occurences of its
+    first char have been changed to *, except do not change the
+    first char itself. e.g. babble yields ba**le Assume that the
+    string is length 1 or more. -->
+ 
     char = s[0]
 
     s = s[1:].replace(char, '*')
@@ -232,10 +226,10 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    """
-    Given strings a and b, return a single string with a and b
-    separated by a space '<a> <b>', except swap the first 2 chars of
-    each string. Assume a and b are length 2 or more."""
+   
+<!--     Given strings a and b, return a single string with a and b
+    separated by a space <a> <b>, except swap the first 2 chars of
+    each string. Assume a and b are length 2 or more. -->
 
     new_a = b[0:2] + a[2:]
     new_b = a[0:2] + b[2:]
@@ -243,11 +237,11 @@ def mix_up(a, b):
 
 
 def verbing(s):
-    """
-    Given a string, if its length is at least 3, add 'ing' to its end.
+  
+<!--     Given a string, if its length is at least 3, add 'ing' to its end.
     Unless it already ends in 'ing', in which case add 'ly' instead.
     If the string length is less than 3, leave it unchanged. Return
-    the resulting string."""
+    the resulting string. -->
 
     length = len(s)
 
@@ -260,12 +254,12 @@ def verbing(s):
 
 
 def not_bad(s):
-    """
-    Given a string, find the first appearance of the substring 'not'
+    
+<!--     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
     'not'...'bad' substring with 'good'. Return the resulting string.
     So 'This dinner is not that bad!' yields: 'This dinner is
-    good!"""
+    good! -->
 
     snot = s.find('not')
     sbad = s.find('bad')
@@ -277,14 +271,14 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    """
-    Consider dividing a string into two halves. If the length is even,
+   
+<!--     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is
     odd, we'll say that the extra char goes in the front half. e.g.
     'abcde', the front half is 'abc', the back half 'de'. Given 2
     strings, a and b, return a string of the form a-front + b-front +
-    a-back + b-back"""
-
+    a-back + b-back -->
+    
     a_idx = len(a) - (len(a) / 2)
     b_idx = len(b) - (len(b) / 2)
 
@@ -393,14 +387,14 @@ if __name__ == "__main__":
     main()
 
 
-###Q8. Parsing
-Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)
+##Q8. Parsing
+## Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)
 
-# The football.csv file contains the results from the English Premier League.
-# The columns labeled ‘Goals’ and ‘Goals Allowed’ contain the total number of
-# goals scored for and against each team in that season (so Arsenal scored 79 goals
-# against opponents, and had 36 goals scored against them). Write a program to read the file,
-# then print the name of the team with the smallest difference in ‘for’ and ‘against’ goals.
-
+###The football.csv file contains the results from the English Premier League.
+ ###The columns labeled ‘Goals’ and ‘Goals Allowed’ contain the total number of
+ ###goals scored for and against each team in that season (so Arsenal scored 79 goals
+ ###against opponents, and had 36 goals scored against them). Write a program to read the file,
+ ###then print the name of the team with the smallest difference in ‘for’ and ‘against’ goals.
+ 
 
 
