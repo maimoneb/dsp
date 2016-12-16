@@ -114,10 +114,8 @@ bryanma@upenn.edu
 ```
 
 from csv import writer
+
 from advanced_python_regex import read_data, get_emails
-
-# Q5-
-
 data = read_data('faculty.csv')
 emails = [x[0] for x in get_emails(data)]
 
