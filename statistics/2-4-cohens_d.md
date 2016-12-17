@@ -1,6 +1,7 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 
 'Brian Maimone problem 2-4'
+
 import thinkplot
 import thinkstats2
 import nsfg
