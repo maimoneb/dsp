@@ -10,8 +10,11 @@ import nsfg
 preg = nsfg.ReadFemPreg()
 
 boolean_index = (preg.pregordr == 1)
+
 firsts = preg[boolean_index]
+
 boolean_index2 = (preg.pregordr != 1)
+
 others = preg[boolean_index2]
 
 print "First born size: {}".format(len(firsts))
