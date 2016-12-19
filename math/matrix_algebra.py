@@ -1,4 +1,4 @@
-# Matrix Algebra
+# Matrix Algebra - Brian Maimone
 
 import numpy as np
 
