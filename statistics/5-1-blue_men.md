@@ -1,7 +1,7 @@
 [Think Stats Chapter 5 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2006.html#toc50) (blue men)
 
 
-#get_ipython().magic(u'reset -f')
+get_ipython().magic(u'reset -f')
 import numpy as np
 from scipy.stats import norm
 import brfss
